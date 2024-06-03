@@ -1,0 +1,65 @@
+<!-- activity_main.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.appcalculater.viewModels.NumberViewModel" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <!-- Input EditText fields -->
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText1"
+            android:hint="Enter numbers"
+        />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText2"
+            android:hint="Enter numbers"
+            />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/editText3"
+            android:hint="Enter numbers"
+            />
+
+        <!-- Calculate Button -->
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/calculateButton"
+            android:text="Calculate"
+        />
+
+        <!-- Display Intersection -->
+        <TextView
+            android:id="@+id/intersectionTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@{viewModel.intersection}"
+        />
+        <!-- Display Union -->
+        <TextView
+            android:id="@+id/unionTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@{viewModel.union}"
+        />
+        <!-- Display Highest Number -->
+        <TextView
+            android:id="@+id/highestNumberTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@{String.valueOf(viewModel.highestNumber)}"
+        />
+    </LinearLayout>
+</layout>
